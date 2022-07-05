@@ -18,7 +18,7 @@ SELECT * FROM `student`
 -- Exo 1.2
 -- Écrivez la requête qui permet de lister tous les projects
 
-ELECT * FROM `projects`
+SELECT * FROM `projects`
 
 -- Exo 1.3
 -- Écrivez la requête qui permet de lister le student dont l'id est `2`
@@ -61,11 +61,14 @@ SELECT * FROM `project` WHERE description NOT LIKE '%dolores%';
 -- Écrivez la requête qui permet de lister les projets dont la date de création est postérieure au 1er juillet 2021 inclus
 
 
-
+SELECT * FROM `project`  WHERE start_date >= '2021/07/01';
 
 -- Exo 1.11
 -- Écrivez la requête qui permet de lister les students ayant un projet
 
+SELECT * FROM student WHERE project_id IS NOT NULL;
+
 -- Exo 1.12
 -- Écrivez la requête qui permet de lister les students n'ayant pas de projet
 
+SELECT * FROM student WHERE project_id IS NOT NULL;

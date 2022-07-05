@@ -77,7 +77,7 @@ VALUES (NULL, 'Promo 2023', 'La promo de lannée 2023', '2023-03-15', NULL);
 -- - tag : SASS (id inconnu)
 -- Note : c'est à vous de retrouver l'id du tag mais vous pouvez l'inscrire en dur dans la requête.
 
-INSERT INTO `student_tag` (`student_id`, `tag_id`) VALUES ('1', '13');
+INSERT INTO `student_tag` (`student_id`, `tag_id`) VALUES ('1', '11');
 
 
 
@@ -111,8 +111,9 @@ DELETE FROM student_tag WHERE student_id = 100 AND tag_id = 10;
 -- - student : Arthur Lacombe
 -- - projet : Dicta quia at qui
 
-UPDATE student WHERE id = 16
+UPDATE student
 SET project_id = NULL
+WHERE id = 16
 
 
 -- Exo 2.8
@@ -120,10 +121,16 @@ SET project_id = NULL
 -- - student : Odette Thomas
 
 
+DELELTE FROM student_tag
+WHERE student_id = 99;
+
 
 -- Exo 2.9
 -- Supprimez un student :
 -- - student : Odette Thomas
+DELETE FROM student 
+WHERE id = 99;
+
 
 -- Exo 2.10
 -- Supprimez un projet et toutes les relations avec ses dépendances, c-à-d les relations avec des student et les relations avec des tags :
